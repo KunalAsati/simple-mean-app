@@ -5,7 +5,7 @@ var express = require('express'),
     engines = require('consolidate'),
     assert = require('assert'),
     ObjectId = require('mongodb').ObjectID,
-    url = 'mongodb://localhost:27017/simplemean';
+    url = 'mongodb://kunal1:5926@ec2-13-126-235-74.ap-south-1.compute.amazonaws.com:27017/dummyDB';
 
 app.use(express.static(__dirname + "/public"));
 
@@ -76,7 +76,7 @@ MongoClient.connect(process.env.MONGODB_URI || url,function(err, db){
     });
 
     app.use(errorHandler);
-    var server = app.listen(process.env.PORT || 3000, function() {
+    var server = app.listen(process.env.PORT || 8086, function() {
         var port = server.address().port;
         console.log('Express server listening on port %s.', port);
     })
