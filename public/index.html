@@ -10,7 +10,13 @@
     </head>
     <body>
         <div class="container" ng-controller="appCtrl as ctrl">
-            <h1>MEAN - Records app</h1>
+            		<!-- HEADER AND TODO COUNT -->
+		    <div class="jumbotron text-center">
+                <h1>The New Pied Piper <span class="label label-info">{{ todos.length }}</span></h1>
+            </div>
+
+
+            <h1>Enter your Details :)</h1>
             <table class="table">
                 <thead>
                     <tr>
